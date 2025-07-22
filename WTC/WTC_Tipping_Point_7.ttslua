@@ -1,137 +1,119 @@
--- FTC-GUID: d78a87
+-- FTC-GUID: ec6d5e
+    -- TO CHANGE THE SIZE OF THE AREA FOR THE MAP LOADING/DELETING, READ THIS
+    -- Change the zoneScale size to match a zone you create in game (as reference)
+    -- Be sure the zone extends below the table too
+    -- This should be the same as the Saving Tool for your table.
+    -------------------------------------------------------------
+    zoneScale = {x=60.12, y=73, z=44.04} --60x44 Strike Force
+    -------------------------------------------------------------
+    function onLoad()
+        self.createButton({
+            label = "Load Map",
+            font_size = 115,
+            color = {0, 1, 0,},
+            position = {-0.96, 0.5, 0},
+            rotation = {0, 90, 0},
+            scale = {1.3, 1, .7},
+            width = 570,
+            height = 160,
+            click_function = "loadMap",
+            function_owner = self,
+        })	
+    
+        self.createButton({
+            label = "Clear Map",
+            font_size = 100,
+            position = {1, 0.5, 0},
+            rotation = {0, 90, 0},
+            scale = {.6, .6, .4},
+            width = 530,
+            height = 130,
+            color = {1, 0, 0},
+            click_function = "clearMap",
+            function_owner = self,
+        })
+    end
+    
+    -------------------
+    -- Prepares the terrain saved into the card from Map Saver tool
+    string.split = function(s, delimiter)
+        local result = { }
+        local from  = 1
+        local delim_from, delim_to = string.find( s, delimiter, from  )
+        while delim_from do
+            table.insert( result, string.sub( s, from , delim_from-1 ) )
+            from  = delim_to + 1
+            delim_from, delim_to = string.find( s, delimiter, from  )
+        end
+        table.insert( result, string.sub( s, from  ) )
+        return result
+    end
+	
+	function scriptzoneCallback(zone) --This deletes everything except the things listed, when the scripting zone is briefly spawned.
+	
+        local objects = zone.getObjects()
+        
+        for i, obj in ipairs(objects) do
+            ----------------------------------------------
+             --IMPORTANT! Keep the map card from deleting speficic stuff here
+            ----------------------------------------------
+            if obj.getGMNotes() ~= "MapExclude" -- As black player, right click and add "MapExclude" to anything you dont want deleted. You may have to temporarily make your table interactable to do this, with its scripting.
+                and
+                obj.getGUID() ~= "e7ca6e" --Exclude Map Buidler Table
+                and 
+                obj.getGUID() ~= "6012bf" --...and ForceOrg Table...
+                and 
+                obj.getGUID() ~= "4ee1f2" --...and FTC board matObjSurface
+                and
+                obj.getGUID() ~= "948ce5" --...and FTC Table
+                and
+                obj.getGUID() ~= "28865a" --...and FTC Felt Surface
+                then 
+                obj.destruct()
+            end  
+        end
+        zone.destruct()
+    end
+    function loadMap(objectClicked, clickerColor, altClickUsed)
+        ----------
+        -- Spawn the scripting zone, which uses the callback above that deletes everything then deletes itself.
+        local scriptzoneParams = {                  -- Define the parameters for the scripting zone
+            position = {x=0, y=26, z=0},
+            scale = zoneScale,
+            type = 'ScriptingTrigger',              -- Use the ScriptingTrigger type to spawn a Scripting Zone
+            callback_function = scriptzoneCallback, -- Specify the function to call when the zone is created
+            callback_owner = self,
+            }
 
-function onLoad()
-  self.createButton({
-      label = "Load Map",
-      font_size = 115,
-      color = {0, 1, 0,},
-      position = {-0.96, 0.5, 0},
-      rotation = {0, 90, 0},
-      scale = {1.3, 1, .7},
-      width = 570,
-      height = 160,
-      click_function = "loadMap",
-      function_owner = self,
-  })
+		spawnObject(scriptzoneParams)
+		-- Then Sspawn the objects stored in the card
+		
+        Wait.time(
+        function()
+            for _, objectJSON in ipairs(objectJSONs) do 
+                -- Spawn the map from the JSON data
+                spawnObjectJSON({
+                    json = objectJSON
+                })
+            end
+        end, .5)
+    end
+    
+    -----------------------------
+    -- This function runs when the Clear Map button is clicked on the Map Card
+    function clearMap(objectClicked, clickerColor, altClickUsed)
 
-  self.createButton({
-      label = "Clear Map",
-      font_size = 100,
-      position = {1, 0.5, 0},
-      rotation = {0, 90, 0},
-      scale = {.6, .6, .4},
-      width = 530,
-      height = 130,
-      color = {1, 0, 0},
-      click_function = "clearMap",
-      function_owner = self,
-  })
-end
+        local scriptzoneParams = {                  -- Define the parameters for the scripting zone
+            position = {x=0, y=26, z=0},
+            scale = zoneScale,
+            type = 'ScriptingTrigger',              -- Use the ScriptingTrigger type to spawn a Scripting Zone
+            callback_function = scriptzoneCallback, -- Specify the function to call when the zone is created
+            callback_owner = self,
+            }
 
--------------------
--- Prepares the terrain saved into the card from Map Saver tool
-string.split = function(s, delimiter)
-  local result = { }
-  local from  = 1
-  local delim_from, delim_to = string.find( s, delimiter, from  )
-  while delim_from do
-      table.insert( result, string.sub( s, from , delim_from-1 ) )
-      from  = delim_to + 1
-      delim_from, delim_to = string.find( s, delimiter, from  )
-  end
-  table.insert( result, string.sub( s, from  ) )
-  return result
-end
-
-function scriptzoneCallback(zone) --This deletes everything except the things listed, when the scripting zone is briefly spawned.
-
-  local objects = zone.getObjects()
-
-  for i, obj in ipairs(objects) do
-      if obj.getGUID() ~= "e7ca6e" --Exclude Map Buidler Table
-          and
-          obj.getGUID() ~= "6012bf" --...and ForceOrg Table...
-          and
-          obj.getGUID() ~= "4ee1f2" --...and FTC board matObjSurface
-          and
-          obj.getGUID() ~= "948ce5" --...and FTC Table
-          and
-          obj.getGUID() ~= "28865a" --...and FTC Felt Surface
-          then
-          obj.destruct()
-      end
-  end
-  zone.destruct()
-end
-function loadMap(objectClicked, clickerColor, altClickUsed)
-  -------------------
-  -- Spawn the scripting zone, which uses the callback above that deletes everything then deletes itself.
-  local scriptzoneParams = {                  -- Define the parameters for the scripting zone
-      position = {x=0, y=26, z=0},
-      --scale = {x=30.15, y=73, z=22.03}, --Kill Team Size
-      --scale = {x=30.15, y=73, z=44.04}, --Incursion and Combat Patrol Size
-      scale = {x=60.12, y=73, z=44.04}, --Strike Force Size
-      --scale = {x=90.07, y=73, z=44.04}, --Onslaught Size
-      type = 'ScriptingTrigger',              -- Use the ScriptingTrigger type to spawn a Scripting Zone
-      callback_function = scriptzoneCallback, -- Specify the function to call when the zone is created
-      callback_owner = self,
-      }
-
-spawnObject(scriptzoneParams)
--- Then Sspawn the objects stored in the card
-
-  Wait.time(
-  function()
-      for _, objectJSON in ipairs(objectJSONs) do
-          -- Spawn the map from the JSON data
-          spawnObjectJSON({
-              json = objectJSON
-          })
-      end
-  end, .5)
-end
-
------------------------------------------------------------------------------------------------------------------
--- This function runs when the Clear Map button is clicked on the Map Card
-function clearMap(objectClicked, clickerColor, altClickUsed)
-
-  local scriptzoneParams = {                  -- Define the parameters for the scripting zone
-      position = {x=0, y=26, z=0},
-      --scale = {x=30.15, y=73, z=22.03}, --Kill Team Size
-      --scale = {x=30.15, y=73, z=44.04}, --Incursion and Combat Patrol Size
-      scale = {x=60.12, y=73, z=44.04}, --Strike Force Size
-      --scale = {x=90.07, y=73, z=44.04}, --Onslaught Size
-      type = 'ScriptingTrigger',              -- Use the ScriptingTrigger type to spawn a Scripting Zone
-      callback_function = scriptzoneCallback, -- Specify the function to call when the zone is created
-      callback_owner = self,
-      }
-
-spawnObject(scriptzoneParams)
-
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    spawnObject(scriptzoneParams)
+    
+    end
         
 
 objectJSONs = {
@@ -178,7 +160,7 @@ objectJSONs = {
   "Hands": false,
   "CustomMesh": {
     "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/879750610978796176/4A5A65543B98BCFBF57E910D06EC984208223D38/",
-    "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2446098699627520804/CFDB9CD2BE996D6F055BEE7645AAEA17D4867624/",
+    "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2446098699627521672/42BA89276A53CA9D7F64485CFE33073C7DD7F727/",
     "NormalURL": "",
     "ColliderURL": "",
     "Convex": true,
@@ -204,9 +186,9 @@ objectJSONs = {
   "GUID": "e23c18",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": -15.3372135,
+    "posX": -15.0422955,
     "posY": 1.08038807,
-    "posZ": 7.9300127,
+    "posZ": 7.98512173,
     "rotX": 1.64118012E-06,
     "rotY": 317.4999,
     "rotZ": -6.382211E-07,
@@ -242,10 +224,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -297,10 +279,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -409,10 +391,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -717,9 +699,9 @@ objectJSONs = {
   "GUID": "ea89e1",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": -22.16195,
+    "posX": -21.8228416,
     "posY": 1.08038807,
-    "posZ": -21.225111,
+    "posZ": -21.0669823,
     "rotX": -1.65952457E-07,
     "rotY": 65.0001144,
     "rotZ": -1.05723586E-07,
@@ -755,10 +737,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -810,10 +792,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -1011,12 +993,12 @@ objectJSONs = {
   "GUID": "5519b3",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": -16.1803341,
+    "posX": -15.9396534,
     "posY": 1.08038807,
-    "posZ": 22.1948166,
-    "rotX": 1.59948868E-07,
-    "rotY": 219.999771,
-    "rotZ": 8.086818E-07,
+    "posZ": 21.9928646,
+    "rotX": 1.59948854E-07,
+    "rotY": 222.5,
+    "rotZ": 8.08681762E-07,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -1049,10 +1031,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -1104,10 +1086,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -1343,10 +1325,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -1398,10 +1380,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -1599,12 +1581,12 @@ objectJSONs = {
   "GUID": "f9e876",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": 2.05196857,
+    "posX": 2.01045752,
     "posY": 1.08038807,
-    "posZ": -22.1009865,
-    "rotX": 3.02330747E-08,
-    "rotY": 39.9999428,
-    "rotZ": -1.02566908E-07,
+    "posZ": -22.0629482,
+    "rotX": 3.023308E-08,
+    "rotY": 42.5000038,
+    "rotZ": -1.025669E-07,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -1637,10 +1619,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -1692,10 +1674,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -1893,11 +1875,11 @@ objectJSONs = {
   "GUID": "f357e4",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": -2.08034682,
+    "posX": -1.92343307,
     "posY": 1.08038807,
-    "posZ": 22.1442337,
-    "rotX": -2.22160523E-07,
-    "rotY": 220.0,
+    "posZ": 22.0004482,
+    "rotX": -2.2216058E-07,
+    "rotY": 222.5,
     "rotZ": 6.10381E-07,
     "scaleX": 1.0,
     "scaleY": 1.0,
@@ -1931,10 +1913,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -1986,10 +1968,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -2451,12 +2433,12 @@ objectJSONs = {
   "GUID": "19ae05",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": 16.1430721,
+    "posX": 15.9742508,
     "posY": 1.08038783,
-    "posZ": -22.1567516,
-    "rotX": 1.024609E-06,
-    "rotY": 40.0000725,
-    "rotZ": 3.22152E-08,
+    "posZ": -22.015089,
+    "rotX": 1.02460922E-06,
+    "rotY": 42.5000038,
+    "rotZ": 3.221525E-08,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -2489,10 +2471,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -2544,10 +2526,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -2783,10 +2765,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -2838,10 +2820,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -3039,12 +3021,12 @@ objectJSONs = {
   "GUID": "4038a6",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": 15.2885733,
+    "posX": 15.1134758,
     "posY": 1.08038783,
-    "posZ": -7.87584352,
+    "posZ": -8.03629,
     "rotX": -3.868003E-08,
     "rotY": 137.499954,
-    "rotZ": -9.946543E-08,
+    "rotZ": -9.94654243E-08,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -3077,10 +3059,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -3132,10 +3114,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -3244,10 +3226,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -3552,9 +3534,9 @@ objectJSONs = {
   "GUID": "3ff169",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": 22.1338634,
+    "posX": 21.8523788,
     "posY": 1.080388,
-    "posZ": 21.2640743,
+    "posZ": 21.1328144,
     "rotX": 4.02518737E-07,
     "rotY": 245.000031,
     "rotZ": 5.59928367E-07,
@@ -3590,10 +3572,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -3645,10 +3627,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -3844,3 +3826,4 @@ objectJSONs = {
 }]],
 
 }
+

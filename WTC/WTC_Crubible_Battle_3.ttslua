@@ -1,4 +1,4 @@
--- FTC-GUID: 8e7589
+-- FTC-GUID: c2cd85
     -- TO CHANGE THE SIZE OF THE AREA FOR THE MAP LOADING/DELETING, READ THIS
     -- Change the zoneScale size to match a zone you create in game (as reference)
     -- Be sure the zone extends below the table too
@@ -183,15 +183,15 @@ objectJSONs = {
   "XmlUI": ""
 }]],
   [[{
-  "GUID": "b37992",
+  "GUID": "c0bb29",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": -17.959795,
-    "posY": 1.080388,
-    "posZ": -5.265494,
-    "rotX": -7.251194E-09,
-    "rotY": 47.48637,
-    "rotZ": -9.871593E-08,
+    "posX": -17.9619541,
+    "posY": 1.08038855,
+    "posZ": -5.946708,
+    "rotX": 5.7939144E-07,
+    "rotY": 50.000042,
+    "rotZ": -2.00842649E-07,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -224,10 +224,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -279,10 +279,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -477,15 +477,309 @@ objectJSONs = {
   ]
 }]],
   [[{
-  "GUID": "a1682a",
+  "GUID": "3d2d4c",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": -19.86008,
-    "posY": 1.080388,
-    "posZ": -9.244189,
-    "rotX": -5.8314626E-08,
-    "rotY": 227.500046,
-    "rotZ": -2.42692181E-07,
+    "posX": -23.6300735,
+    "posY": 1.08038831,
+    "posZ": 12.8043537,
+    "rotX": -1.3097183E-05,
+    "rotY": 129.999985,
+    "rotZ": 1.13069091E-05,
+    "scaleX": 1.0,
+    "scaleY": 1.0,
+    "scaleZ": 1.0
+  },
+  "Nickname": "TWO STOREY RUIN",
+  "Description": "",
+  "GMNotes": "",
+  "AltLookAngle": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "ColorDiffuse": {
+    "r": 1.0,
+    "g": 1.0,
+    "b": 1.0
+  },
+  "LayoutGroupSortIndex": 0,
+  "Value": 0,
+  "Locked": true,
+  "Grid": true,
+  "Snap": true,
+  "IgnoreFoW": false,
+  "MeasureMovement": false,
+  "DragSelectable": true,
+  "Autoraise": true,
+  "Sticky": true,
+  "Tooltip": true,
+  "GridProjection": false,
+  "HideWhenFaceDown": false,
+  "Hands": false,
+  "CustomMesh": {
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
+    "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
+    "NormalURL": "",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
+    "Convex": true,
+    "MaterialIndex": 1,
+    "TypeIndex": 0,
+    "CastShadows": true
+  },
+  "LuaScript": "",
+  "LuaScriptState": "",
+  "XmlUI": "",
+  "States": {
+    "2": {
+      "GUID": "62343f",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -4.473113,
+        "posY": 1.05999422,
+        "posZ": -3.67091537,
+        "rotX": -1.15918638E-05,
+        "rotY": 180.022491,
+        "rotZ": 2.38660959E-06,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "TWO STOREY RUIN",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 0,
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "ChildObjects": [
+        {
+          "GUID": "4d9e96",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -0.88417995,
+            "posY": -0.0191532522,
+            "posZ": 5.2069025,
+            "rotX": 0.0141968532,
+            "rotY": 89.98924,
+            "rotZ": 359.973938,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 0.9999999
+          },
+          "Nickname": "TWO STOREY RUIN",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700191697866339/512A215790C3FB9D46B89208BDB234D98D8C3350/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794552248/6D9B9FB570E97EA80128D58CD4A0EB295F654306/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1723164938912201570/3CFC9BAA671D43615F4A56A37B443F1819EA1672/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 0,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        }
+      ]
+    }
+  },
+  "ChildObjects": [
+    {
+      "GUID": "72dd3e",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -2.825966,
+        "posY": 3.197431,
+        "posZ": 3.22611618,
+        "rotX": 0.0003967813,
+        "rotY": 89.88531,
+        "rotZ": 0.06066871,
+        "scaleX": 0.9999999,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "TWO STOREY RUIN",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.6627451,
+        "g": 0.6627451,
+        "b": 0.6627451
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2050876934859026362/8EDA2E480DFEC1B0B885AB4633074F004E96648D/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794554175/892D44213E132546A15A01E898CEE59F66ACFE5D/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2050876934859026362/8EDA2E480DFEC1B0B885AB4633074F004E96648D/",
+        "Convex": false,
+        "MaterialIndex": 1,
+        "TypeIndex": 0,
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "PhysicsMaterial": {
+        "StaticFriction": 1.0,
+        "DynamicFriction": 0.7,
+        "Bounciness": 0.0,
+        "FrictionCombine": 0,
+        "BounceCombine": 0
+      },
+      "Rigidbody": {
+        "Mass": 1.0,
+        "Drag": 0.1,
+        "AngularDrag": 0.1,
+        "UseGravity": true
+      }
+    },
+    {
+      "GUID": "4d9e96",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -0.8841783,
+        "posY": -0.01908197,
+        "posZ": 5.20689726,
+        "rotX": 6.123416E-07,
+        "rotY": 89.98991,
+        "rotZ": 1.35608184E-06,
+        "scaleX": 0.9999999,
+        "scaleY": 1.0,
+        "scaleZ": 0.9999999
+      },
+      "Nickname": "TWO STOREY RUIN",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700191697866339/512A215790C3FB9D46B89208BDB234D98D8C3350/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794552248/6D9B9FB570E97EA80128D58CD4A0EB295F654306/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1723164938912201570/3CFC9BAA671D43615F4A56A37B443F1819EA1672/",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 0,
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    }
+  ]
+}]],
+  [[{
+  "GUID": "24a11c",
+  "Name": "Custom_Model",
+  "Transform": {
+    "posX": -19.0297146,
+    "posY": 1.08038712,
+    "posZ": -8.939331,
+    "rotX": 3.66029917E-06,
+    "rotY": 230.000031,
+    "rotZ": 4.27166469E-06,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -518,10 +812,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -573,10 +867,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -685,10 +979,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -990,309 +1284,15 @@ objectJSONs = {
   ]
 }]],
   [[{
-  "GUID": "cf6915",
+  "GUID": "d40a5f",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": -24.132822,
-    "posY": 1.08038819,
-    "posZ": 13.3617811,
-    "rotX": -1.48417939E-07,
-    "rotY": 132.499954,
-    "rotZ": -1.09911635E-08,
-    "scaleX": 1.0,
-    "scaleY": 1.0,
-    "scaleZ": 1.0
-  },
-  "Nickname": "TWO STOREY RUIN",
-  "Description": "",
-  "GMNotes": "",
-  "AltLookAngle": {
-    "x": 0.0,
-    "y": 0.0,
-    "z": 0.0
-  },
-  "ColorDiffuse": {
-    "r": 1.0,
-    "g": 1.0,
-    "b": 1.0
-  },
-  "LayoutGroupSortIndex": 0,
-  "Value": 0,
-  "Locked": true,
-  "Grid": true,
-  "Snap": true,
-  "IgnoreFoW": false,
-  "MeasureMovement": false,
-  "DragSelectable": true,
-  "Autoraise": true,
-  "Sticky": true,
-  "Tooltip": true,
-  "GridProjection": false,
-  "HideWhenFaceDown": false,
-  "Hands": false,
-  "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
-    "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
-    "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
-    "Convex": true,
-    "MaterialIndex": 1,
-    "TypeIndex": 0,
-    "CastShadows": true
-  },
-  "LuaScript": "",
-  "LuaScriptState": "",
-  "XmlUI": "",
-  "States": {
-    "2": {
-      "GUID": "62343f",
-      "Name": "Custom_Model",
-      "Transform": {
-        "posX": -4.473113,
-        "posY": 1.05999422,
-        "posZ": -3.67091537,
-        "rotX": -1.15918638E-05,
-        "rotY": 180.022491,
-        "rotZ": 2.38660959E-06,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "TWO STOREY RUIN",
-      "Description": "",
-      "GMNotes": "",
-      "AltLookAngle": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
-      },
-      "LayoutGroupSortIndex": 0,
-      "Value": 0,
-      "Locked": true,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": false,
-      "Hands": false,
-      "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
-        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
-        "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
-        "Convex": true,
-        "MaterialIndex": 1,
-        "TypeIndex": 0,
-        "CastShadows": true
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "ChildObjects": [
-        {
-          "GUID": "4d9e96",
-          "Name": "Custom_Model",
-          "Transform": {
-            "posX": -0.88417995,
-            "posY": -0.0191532522,
-            "posZ": 5.2069025,
-            "rotX": 0.0141968532,
-            "rotY": 89.98924,
-            "rotZ": 359.973938,
-            "scaleX": 1.0,
-            "scaleY": 1.0,
-            "scaleZ": 0.9999999
-          },
-          "Nickname": "TWO STOREY RUIN",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomMesh": {
-            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700191697866339/512A215790C3FB9D46B89208BDB234D98D8C3350/",
-            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794552248/6D9B9FB570E97EA80128D58CD4A0EB295F654306/",
-            "NormalURL": "",
-            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1723164938912201570/3CFC9BAA671D43615F4A56A37B443F1819EA1672/",
-            "Convex": true,
-            "MaterialIndex": 1,
-            "TypeIndex": 0,
-            "CastShadows": true
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        }
-      ]
-    }
-  },
-  "ChildObjects": [
-    {
-      "GUID": "72dd3e",
-      "Name": "Custom_Model",
-      "Transform": {
-        "posX": -2.825966,
-        "posY": 3.197431,
-        "posZ": 3.22611618,
-        "rotX": 0.0003967813,
-        "rotY": 89.88531,
-        "rotZ": 0.06066871,
-        "scaleX": 0.9999999,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "TWO STOREY RUIN",
-      "Description": "",
-      "GMNotes": "",
-      "AltLookAngle": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "ColorDiffuse": {
-        "r": 0.6627451,
-        "g": 0.6627451,
-        "b": 0.6627451
-      },
-      "LayoutGroupSortIndex": 0,
-      "Value": 0,
-      "Locked": true,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": false,
-      "Hands": false,
-      "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2050876934859026362/8EDA2E480DFEC1B0B885AB4633074F004E96648D/",
-        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794554175/892D44213E132546A15A01E898CEE59F66ACFE5D/",
-        "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2050876934859026362/8EDA2E480DFEC1B0B885AB4633074F004E96648D/",
-        "Convex": false,
-        "MaterialIndex": 1,
-        "TypeIndex": 0,
-        "CastShadows": true
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "PhysicsMaterial": {
-        "StaticFriction": 1.0,
-        "DynamicFriction": 0.7,
-        "Bounciness": 0.0,
-        "FrictionCombine": 0,
-        "BounceCombine": 0
-      },
-      "Rigidbody": {
-        "Mass": 1.0,
-        "Drag": 0.1,
-        "AngularDrag": 0.1,
-        "UseGravity": true
-      }
-    },
-    {
-      "GUID": "4d9e96",
-      "Name": "Custom_Model",
-      "Transform": {
-        "posX": -0.8841783,
-        "posY": -0.01908197,
-        "posZ": 5.20689726,
-        "rotX": 6.123416E-07,
-        "rotY": 89.98991,
-        "rotZ": 1.35608184E-06,
-        "scaleX": 0.9999999,
-        "scaleY": 1.0,
-        "scaleZ": 0.9999999
-      },
-      "Nickname": "TWO STOREY RUIN",
-      "Description": "",
-      "GMNotes": "",
-      "AltLookAngle": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
-      },
-      "LayoutGroupSortIndex": 0,
-      "Value": 0,
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": false,
-      "Hands": false,
-      "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700191697866339/512A215790C3FB9D46B89208BDB234D98D8C3350/",
-        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794552248/6D9B9FB570E97EA80128D58CD4A0EB295F654306/",
-        "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1723164938912201570/3CFC9BAA671D43615F4A56A37B443F1819EA1672/",
-        "Convex": true,
-        "MaterialIndex": 1,
-        "TypeIndex": 0,
-        "CastShadows": true
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": ""
-    }
-  ]
-}]],
-  [[{
-  "GUID": "1023f9",
-  "Name": "Custom_Model",
-  "Transform": {
-    "posX": -7.012832,
-    "posY": 1.080388,
-    "posZ": -9.171741,
-    "rotX": 5.74714676E-08,
-    "rotY": 74.97253,
-    "rotZ": 9.556391E-08,
+    "posX": -7.06921864,
+    "posY": 1.08038807,
+    "posZ": -8.986681,
+    "rotX": 1.85288161E-06,
+    "rotY": 77.4999161,
+    "rotZ": -1.797137E-06,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -1325,10 +1325,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -1380,10 +1380,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -1492,10 +1492,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -1797,15 +1797,15 @@ objectJSONs = {
   ]
 }]],
   [[{
-  "GUID": "521e0b",
+  "GUID": "3ce688",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": -8.984507,
-    "posY": 0.980381,
-    "posZ": 5.30807066,
-    "rotX": -4.27342627E-07,
-    "rotY": 180.021774,
-    "rotZ": -6.40302034E-10,
+    "posX": -8.93919,
+    "posY": 0.9803808,
+    "posZ": 5.328016,
+    "rotX": 7.9064236E-08,
+    "rotY": 180.008392,
+    "rotZ": -3.28376437E-10,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -1929,15 +1929,15 @@ objectJSONs = {
   ]
 }]],
   [[{
-  "GUID": "0032b7",
+  "GUID": "fa3915",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": -8.194128,
-    "posY": 1.08038807,
-    "posZ": 16.9736481,
-    "rotX": 6.37365E-08,
-    "rotY": 162.5,
-    "rotZ": 1.34518146E-07,
+    "posX": -8.127729,
+    "posY": 1.08038759,
+    "posZ": 16.9949112,
+    "rotX": 8.24557958E-07,
+    "rotY": 162.499969,
+    "rotZ": -2.55136172E-07,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -1970,10 +1970,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -2025,10 +2025,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -2226,12 +2226,12 @@ objectJSONs = {
   "GUID": "094fa0",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": 8.151602,
+    "posX": 8.174777,
     "posY": 1.08038807,
-    "posZ": -16.97142,
-    "rotX": 2.437167E-07,
-    "rotY": 342.5,
-    "rotZ": -1.14855162E-07,
+    "posZ": -16.9625835,
+    "rotX": -4.163111E-07,
+    "rotY": 342.499939,
+    "rotZ": 4.95990264E-07,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -2264,10 +2264,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -2319,10 +2319,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -2520,12 +2520,12 @@ objectJSONs = {
   "GUID": "655136",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": 6.975977,
-    "posY": 1.080388,
-    "posZ": 9.17753,
-    "rotX": -3.33834777E-07,
-    "rotY": 255.0203,
-    "rotZ": -1.942864E-07,
+    "posX": 7.11648,
+    "posY": 1.08038664,
+    "posZ": 9.018765,
+    "rotX": 9.49743E-07,
+    "rotY": 257.500031,
+    "rotZ": 1.80667115E-07,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -2558,10 +2558,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -2613,10 +2613,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -2725,10 +2725,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -3033,12 +3033,12 @@ objectJSONs = {
   "GUID": "d10c1d",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": 8.986243,
-    "posY": 0.9803791,
-    "posZ": -5.295676,
-    "rotX": -9.145343E-08,
-    "rotY": -5.66885319E-05,
-    "rotZ": -2.55391868E-08,
+    "posX": 8.986244,
+    "posY": 0.980380535,
+    "posZ": -5.29567575,
+    "rotX": -2.63119637E-06,
+    "rotY": -6.121648E-05,
+    "rotZ": 3.87691754E-11,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -3162,309 +3162,15 @@ objectJSONs = {
   ]
 }]],
   [[{
-  "GUID": "e00338",
-  "Name": "Custom_Model",
-  "Transform": {
-    "posX": 24.0907326,
-    "posY": 1.08038819,
-    "posZ": -13.3595362,
-    "rotX": -2.39502327E-07,
-    "rotY": 312.500061,
-    "rotZ": 4.09683025E-07,
-    "scaleX": 1.0,
-    "scaleY": 1.0,
-    "scaleZ": 1.0
-  },
-  "Nickname": "TWO STOREY RUIN",
-  "Description": "",
-  "GMNotes": "",
-  "AltLookAngle": {
-    "x": 0.0,
-    "y": 0.0,
-    "z": 0.0
-  },
-  "ColorDiffuse": {
-    "r": 1.0,
-    "g": 1.0,
-    "b": 1.0
-  },
-  "LayoutGroupSortIndex": 0,
-  "Value": 0,
-  "Locked": true,
-  "Grid": true,
-  "Snap": true,
-  "IgnoreFoW": false,
-  "MeasureMovement": false,
-  "DragSelectable": true,
-  "Autoraise": true,
-  "Sticky": true,
-  "Tooltip": true,
-  "GridProjection": false,
-  "HideWhenFaceDown": false,
-  "Hands": false,
-  "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
-    "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
-    "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
-    "Convex": true,
-    "MaterialIndex": 1,
-    "TypeIndex": 0,
-    "CastShadows": true
-  },
-  "LuaScript": "",
-  "LuaScriptState": "",
-  "XmlUI": "",
-  "States": {
-    "2": {
-      "GUID": "62343f",
-      "Name": "Custom_Model",
-      "Transform": {
-        "posX": -4.473113,
-        "posY": 1.05999422,
-        "posZ": -3.67091537,
-        "rotX": -1.15918638E-05,
-        "rotY": 180.022491,
-        "rotZ": 2.38660959E-06,
-        "scaleX": 1.0,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "TWO STOREY RUIN",
-      "Description": "",
-      "GMNotes": "",
-      "AltLookAngle": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
-      },
-      "LayoutGroupSortIndex": 0,
-      "Value": 0,
-      "Locked": true,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": false,
-      "Hands": false,
-      "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
-        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
-        "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
-        "Convex": true,
-        "MaterialIndex": 1,
-        "TypeIndex": 0,
-        "CastShadows": true
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "ChildObjects": [
-        {
-          "GUID": "4d9e96",
-          "Name": "Custom_Model",
-          "Transform": {
-            "posX": -0.88417995,
-            "posY": -0.0191532522,
-            "posZ": 5.2069025,
-            "rotX": 0.0141968532,
-            "rotY": 89.98924,
-            "rotZ": 359.973938,
-            "scaleX": 1.0,
-            "scaleY": 1.0,
-            "scaleZ": 0.9999999
-          },
-          "Nickname": "TWO STOREY RUIN",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomMesh": {
-            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700191697866339/512A215790C3FB9D46B89208BDB234D98D8C3350/",
-            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794552248/6D9B9FB570E97EA80128D58CD4A0EB295F654306/",
-            "NormalURL": "",
-            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1723164938912201570/3CFC9BAA671D43615F4A56A37B443F1819EA1672/",
-            "Convex": true,
-            "MaterialIndex": 1,
-            "TypeIndex": 0,
-            "CastShadows": true
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        }
-      ]
-    }
-  },
-  "ChildObjects": [
-    {
-      "GUID": "72dd3e",
-      "Name": "Custom_Model",
-      "Transform": {
-        "posX": -2.825966,
-        "posY": 3.197431,
-        "posZ": 3.22611618,
-        "rotX": 0.0003967813,
-        "rotY": 89.88531,
-        "rotZ": 0.06066871,
-        "scaleX": 0.9999999,
-        "scaleY": 1.0,
-        "scaleZ": 1.0
-      },
-      "Nickname": "TWO STOREY RUIN",
-      "Description": "",
-      "GMNotes": "",
-      "AltLookAngle": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "ColorDiffuse": {
-        "r": 0.6627451,
-        "g": 0.6627451,
-        "b": 0.6627451
-      },
-      "LayoutGroupSortIndex": 0,
-      "Value": 0,
-      "Locked": true,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": false,
-      "Hands": false,
-      "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2050876934859026362/8EDA2E480DFEC1B0B885AB4633074F004E96648D/",
-        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794554175/892D44213E132546A15A01E898CEE59F66ACFE5D/",
-        "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2050876934859026362/8EDA2E480DFEC1B0B885AB4633074F004E96648D/",
-        "Convex": false,
-        "MaterialIndex": 1,
-        "TypeIndex": 0,
-        "CastShadows": true
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": "",
-      "PhysicsMaterial": {
-        "StaticFriction": 1.0,
-        "DynamicFriction": 0.7,
-        "Bounciness": 0.0,
-        "FrictionCombine": 0,
-        "BounceCombine": 0
-      },
-      "Rigidbody": {
-        "Mass": 1.0,
-        "Drag": 0.1,
-        "AngularDrag": 0.1,
-        "UseGravity": true
-      }
-    },
-    {
-      "GUID": "4d9e96",
-      "Name": "Custom_Model",
-      "Transform": {
-        "posX": -0.8841783,
-        "posY": -0.01908197,
-        "posZ": 5.20689726,
-        "rotX": 6.123416E-07,
-        "rotY": 89.98991,
-        "rotZ": 1.35608184E-06,
-        "scaleX": 0.9999999,
-        "scaleY": 1.0,
-        "scaleZ": 0.9999999
-      },
-      "Nickname": "TWO STOREY RUIN",
-      "Description": "",
-      "GMNotes": "",
-      "AltLookAngle": {
-        "x": 0.0,
-        "y": 0.0,
-        "z": 0.0
-      },
-      "ColorDiffuse": {
-        "r": 1.0,
-        "g": 1.0,
-        "b": 1.0
-      },
-      "LayoutGroupSortIndex": 0,
-      "Value": 0,
-      "Locked": false,
-      "Grid": true,
-      "Snap": true,
-      "IgnoreFoW": false,
-      "MeasureMovement": false,
-      "DragSelectable": true,
-      "Autoraise": true,
-      "Sticky": true,
-      "Tooltip": true,
-      "GridProjection": false,
-      "HideWhenFaceDown": false,
-      "Hands": false,
-      "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700191697866339/512A215790C3FB9D46B89208BDB234D98D8C3350/",
-        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794552248/6D9B9FB570E97EA80128D58CD4A0EB295F654306/",
-        "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1723164938912201570/3CFC9BAA671D43615F4A56A37B443F1819EA1672/",
-        "Convex": true,
-        "MaterialIndex": 1,
-        "TypeIndex": 0,
-        "CastShadows": true
-      },
-      "LuaScript": "",
-      "LuaScriptState": "",
-      "XmlUI": ""
-    }
-  ]
-}]],
-  [[{
   "GUID": "ace409",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": 19.81727,
-    "posY": 1.08038807,
-    "posZ": 9.245892,
-    "rotX": 2.962643E-07,
-    "rotY": 47.4999657,
-    "rotZ": 4.82492E-09,
+    "posX": 19.0768089,
+    "posY": 1.080389,
+    "posZ": 8.971585,
+    "rotX": 8.911524E-06,
+    "rotY": 49.9999924,
+    "rotZ": 4.626529E-06,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -3497,10 +3203,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -3552,10 +3258,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -3664,10 +3370,10 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794548479/1334E2934F85878167A301C71EBDE0DD7AB39D9C/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -3969,15 +3675,15 @@ objectJSONs = {
   ]
 }]],
   [[{
-  "GUID": "e2a325",
+  "GUID": "e00338",
   "Name": "Custom_Model",
   "Transform": {
-    "posX": 17.9215336,
-    "posY": 1.080388,
-    "posZ": 5.288127,
-    "rotX": 3.817429E-07,
-    "rotY": 227.500046,
-    "rotZ": -6.56350139E-08,
+    "posX": 23.677145,
+    "posY": 1.08038735,
+    "posZ": -12.7720108,
+    "rotX": -1.26948564E-07,
+    "rotY": 310.0,
+    "rotZ": 5.91970633E-08,
     "scaleX": 1.0,
     "scaleY": 1.0,
     "scaleZ": 1.0
@@ -4010,10 +3716,10 @@ objectJSONs = {
   "HideWhenFaceDown": false,
   "Hands": false,
   "CustomMesh": {
-    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
     "NormalURL": "",
-    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
     "Convex": true,
     "MaterialIndex": 1,
     "TypeIndex": 0,
@@ -4065,10 +3771,304 @@ objectJSONs = {
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomMesh": {
-        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
         "NormalURL": "",
-        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612172827586509/C1C9AC4E7041FF5A1531A7F5D6DF839DB0BEE0E1/",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 0,
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "ChildObjects": [
+        {
+          "GUID": "4d9e96",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -0.88417995,
+            "posY": -0.0191532522,
+            "posZ": 5.2069025,
+            "rotX": 0.0141968532,
+            "rotY": 89.98924,
+            "rotZ": 359.973938,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 0.9999999
+          },
+          "Nickname": "TWO STOREY RUIN",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700191697866339/512A215790C3FB9D46B89208BDB234D98D8C3350/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794552248/6D9B9FB570E97EA80128D58CD4A0EB295F654306/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1723164938912201570/3CFC9BAA671D43615F4A56A37B443F1819EA1672/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 0,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        }
+      ]
+    }
+  },
+  "ChildObjects": [
+    {
+      "GUID": "72dd3e",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -2.825966,
+        "posY": 3.197431,
+        "posZ": 3.22611618,
+        "rotX": 0.0003967813,
+        "rotY": 89.88531,
+        "rotZ": 0.06066871,
+        "scaleX": 0.9999999,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "TWO STOREY RUIN",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.6627451,
+        "g": 0.6627451,
+        "b": 0.6627451
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2050876934859026362/8EDA2E480DFEC1B0B885AB4633074F004E96648D/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794554175/892D44213E132546A15A01E898CEE59F66ACFE5D/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2050876934859026362/8EDA2E480DFEC1B0B885AB4633074F004E96648D/",
+        "Convex": false,
+        "MaterialIndex": 1,
+        "TypeIndex": 0,
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "PhysicsMaterial": {
+        "StaticFriction": 1.0,
+        "DynamicFriction": 0.7,
+        "Bounciness": 0.0,
+        "FrictionCombine": 0,
+        "BounceCombine": 0
+      },
+      "Rigidbody": {
+        "Mass": 1.0,
+        "Drag": 0.1,
+        "AngularDrag": 0.1,
+        "UseGravity": true
+      }
+    },
+    {
+      "GUID": "4d9e96",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -0.8841783,
+        "posY": -0.01908197,
+        "posZ": 5.20689726,
+        "rotX": 6.123416E-07,
+        "rotY": 89.98991,
+        "rotZ": 1.35608184E-06,
+        "scaleX": 0.9999999,
+        "scaleY": 1.0,
+        "scaleZ": 0.9999999
+      },
+      "Nickname": "TWO STOREY RUIN",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700191697866339/512A215790C3FB9D46B89208BDB234D98D8C3350/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794552248/6D9B9FB570E97EA80128D58CD4A0EB295F654306/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/1723164938912201570/3CFC9BAA671D43615F4A56A37B443F1819EA1672/",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 0,
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    }
+  ]
+}]],
+  [[{
+  "GUID": "e2a325",
+  "Name": "Custom_Model",
+  "Transform": {
+    "posX": 18.0094585,
+    "posY": 1.08038783,
+    "posZ": 5.97881126,
+    "rotX": 1.4869758E-07,
+    "rotY": 230.000046,
+    "rotZ": -3.188826E-07,
+    "scaleX": 1.0,
+    "scaleY": 1.0,
+    "scaleZ": 1.0
+  },
+  "Nickname": "TWO STOREY RUIN",
+  "Description": "",
+  "GMNotes": "",
+  "AltLookAngle": {
+    "x": 0.0,
+    "y": 0.0,
+    "z": 0.0
+  },
+  "ColorDiffuse": {
+    "r": 1.0,
+    "g": 1.0,
+    "b": 1.0
+  },
+  "LayoutGroupSortIndex": 0,
+  "Value": 0,
+  "Locked": true,
+  "Grid": true,
+  "Snap": true,
+  "IgnoreFoW": false,
+  "MeasureMovement": false,
+  "DragSelectable": true,
+  "Autoraise": true,
+  "Sticky": true,
+  "Tooltip": true,
+  "GridProjection": false,
+  "HideWhenFaceDown": false,
+  "Hands": false,
+  "CustomMesh": {
+    "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
+    "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
+    "NormalURL": "",
+    "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
+    "Convex": true,
+    "MaterialIndex": 1,
+    "TypeIndex": 0,
+    "CastShadows": true
+  },
+  "LuaScript": "",
+  "LuaScriptState": "",
+  "XmlUI": "",
+  "States": {
+    "2": {
+      "GUID": "62343f",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": -4.473113,
+        "posY": 1.05999422,
+        "posZ": -3.67091537,
+        "rotX": -1.15918638E-05,
+        "rotY": 180.022491,
+        "rotZ": 2.38660959E-06,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "TWO STOREY RUIN",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/2468612808463279930/906C1B133F98620CDB26A9C3EA255F62D8F6BA1F/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/2281700278794546780/4C1A1CADC0BF9517EA008C849FC4707BD783ACE7/",
         "Convex": true,
         "MaterialIndex": 1,
         "TypeIndex": 0,
@@ -4264,3 +4264,4 @@ objectJSONs = {
 }]],
 
 }
+
